@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="agenda">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Agenda DBServer</title>
+
+	<!-- build:css css/style.css -->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="css/angular-moment-picker.css">
+	<!-- endbuild -->
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.js"></script>
+	
+	<!-- build:inlinejs js/lib.js -->
+	<script src="js/lib/angular.min.js"></script>
+	<script src="js/lib/angular-animate.min.js"></script>
+	<script src="js/lib/angular-moment-picker.min.js"></script>
+	<script src="js/lib/angular-resource.min.js"></script>
+	<script src="js/lib/angular-route.min.js"></script>
+	<!-- endbuild -->
+
+
+	<!-- build:inlinejs js/app.js -->
+	<script src="js/main.js"></script>
+	
+	<script src="js/controllers/login-controller.js"></script>
+	<script src="js/controllers/compromissos-controller.js"></script>
+	<script src="js/controllers/compromisso-controller.js"></script>
+	<script src="js/controllers/consultor-controller.js"></script>
+	
+	<script src="js/directives/compromissos-diretiva.js"></script>
+	<script src="js/directives/consultor-diretiva.js"></script>
+	
+	<script src="js/services/compromissos-servico.js"></script>
+	<script src="js/services/consultor-servico.js"></script>
+	<script src="js/services/login-servico.js"></script>
+	<!-- endbuild -->
+</head>
+
+<body>
+
+	<header>
+
+		<div class="wrapper row">
+			
+			<div class="col s12 m9">
+
+				<a href="#/agenda">
+
+					<img src="img/LogoDB.png" alt="DBServer" title="DBServer" class="logo">
+
+				</a>
+
+			</div>
+
+			<div class="col s12 m3">
+
+				<consultor></consultor>
+
+			</div>
+
+		</div>
+		
+	</header>
+
+
+	<main class="row">
+
+		<div class="wrapper">
+
+			<aside class="col s12 m2">
+
+				<div class="input-field" ng-controller="ConsultorController" ng-show="consultor">
+					
+					<total-de-compromissos></total-de-compromissos>
+
+					<a href="#/agenda/new" class="waves-effect waves-light btn blue darken-4">Cadastrar compromisso</a>
+
+					<a href="#/agenda" class="waves-effect waves-light btn blue darken-4">Ver compromissos</a>
+
+				</div>
+			
+			</aside>
+
+			<ng-view class="content col s12 m10"></ng-view>
+
+		</main>
+
+		<footer></footer>
+
+	</body>
+
+	</html>

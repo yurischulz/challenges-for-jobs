@@ -1,0 +1,26 @@
+{
+  "professionals": [
+    {
+      "id": 1,
+      "name": "Alessandra Cecchin",
+      "crn": "11564D",
+      "bio": "Nutricionista graduada pela PUCRS. Esteticista e Cosmetóloga graduada pela ULBRA",
+      "location": {
+        "name": "Espaço Articular",
+        "address": "Av. Ipiranga, 40 - Porto Alegre/RS",
+        "phone": "51 9 95397357"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Alessandra Cecchin",
+      "crn": "11564D",
+      "bio": "Nutricionista graduada pela PUCRS. Esteticista e Cosmetóloga graduada pela ULBRA",
+      "location": {
+        "name": "Espaço Divas",
+        "address": "Av. Bastian, 43 - Porto Alegre/RS",
+        "phone": "51 9 95397357"
+      }
+    }
+  ]
+}

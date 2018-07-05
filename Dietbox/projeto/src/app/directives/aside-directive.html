@@ -1,0 +1,122 @@
+<ul class="nav nav-tabs" ng-init="tab=1">
+
+    <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" ng-click="tab=1" ng-class="{'active' : tab==1}" ref="#list" role="tab">Lista de profissionais</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" ng-click="tab=2" ng-class="{'active' : tab==2}" role="tab">Cadastrar-se</a>
+    </li>
+
+</ul>
+
+<div class="tab-content">
+
+
+    <div id="list" class="tab-content" role="tabpanel" ng-show="tab == 1">
+
+
+        <div class="header">
+
+            <h5>Lista de profissionais</h5>
+
+        </div>
+
+        <div class="list-group">
+
+            <div class="form-group col-sm-12">
+
+                <label for="fullname">Encontre um profissional</label>
+
+                <input type="text" class="form-control" id="crn"  placeholder=""  ng-model="filter" ng-model-options="{ debounce: 300 }">
+
+            </div>
+
+            <button
+            type="button"
+            class="list-group-item list-group-item-action"
+            ng-repeat="professional in professionals | filter: filter track by $index"
+            data-target="#marker-info-{{ $index }}"
+            ng-click="showInfoWindow(event, $index)">{{ professional.name }}</button>
+
+        </div>
+
+    </div>
+
+    <div id="new" class="tab-content" role="tabpanel" ng-show="tab == 2" ng-controller="ProfessionalController">
+
+        <div class="header">
+
+            <h5>Cadastre-se!</h5>
+
+        </div>
+
+        <div class="col-sm-12">
+
+            <form novalidate ng-submit="submeter()" action="#">
+
+                <div class="form-group">
+
+                    <label for="fullname">Nome completo</label>
+
+                    <input type="text" class="form-control" id="fullname" placeholder="" ng-model="professional.name">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="fullname">CRN</label>
+
+                    <input type="text" class="form-control" id="crn"  placeholder="" ng-model="professional.crn">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="fullname">Biografia</label>
+
+                    <textarea class="form-control" id="bio" rows="3" ng-model="professional.bio"></textarea>
+
+                </div>
+
+                <div class="panel">
+
+                    <div class="panel-body">
+
+                        <div class="form-group">
+
+                            <label for="fullname">Local</label>
+
+                            <input type="text" class="form-control" id="crn"  placeholder="" ng-model="professional.location.name">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="fullname">Endereço</label>
+
+                            <input type="text" class="form-control" id="crn"  placeholder="" ng-model="professional.location.address">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="fullname">Telefone</label>
+
+                            <input type="text" class="form-control" id="crn"  placeholder="" ng-model="professional.location.phone">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn btn-primary">Salvar</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>

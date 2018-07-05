@@ -1,0 +1,99 @@
+/* BOX MODEL RESET */
+html, body, div,
+form, fieldset, legend, input, select, textarea,
+dl, ol, ul, li, dd, dt,
+h1, h2, h3, h4, h5, h6, p {
+	margin:0;
+	padding:0;
+}
+fieldset,
+a img {
+	border:0 none;
+}
+hr {
+	display:none;
+}
+table {
+	border-collapse:collapse;
+}
+label,
+button,
+input[type="button"] {
+	cursor:pointer;
+}
+a:hover, a:active, a:focus,
+object,
+embed,
+:focus, :active {
+	outline:none;
+}
+/* CONFIGURACOES DE TIPOGRAFIA */
+body {
+	@include regular();
+	font-family: 'Verdana', sans-serif;
+	font-size:12px;
+	line-height:1.3;
+	vertical-align:middle;
+	cursor:default;	
+	color:#333;
+	background: #fff;
+}
+input,
+button,
+textarea,
+select,
+samp {
+	@include regular();
+}
+small,
+big {
+	font-size:100%;
+}
+strong, b {
+	@include bold();
+}
+
+
+/* COMPORTAMENTO DEFAULT PARA LINK */
+a,
+a:link,
+a:visited { text-decoration:none; color:#333; }
+a:hover 	{ text-decoration:underline; }
+a:active 	{ text-decoration:none; color:#333; }
+
+
+/* COR DE SELEÇÃO */
+::-moz-selection 	{ background:$base-color-1; color:$font-color-1; text-shadow:none; }
+::selection 		{ background:$base-color-1; color:$font-color-1; text-shadow:none; }
+
+/* COMPORTAMENTO DEFAULT PARA INPUTS */
+form .type-text,
+form input[type="text"],
+form .type-password,
+form input[type="password"],
+form textarea,
+select {
+	font-size: 12px;
+	display: inline-block;
+	padding: 3px;
+	background: #FFF;
+	border: 1px solid #D8D8D8;
+	vertical-align: baseline;
+}
+input[type="radio"], .type-radio,
+input[type="checkbox"], .type-checkbox {
+	vertical-align: middle;
+}
+form .focused,
+form .type-text:focus,
+form .type-password:focus,
+form textarea:focus,
+select:focus  {
+	border-color: $base-color-1;
+}
+form.validate input.input-error,
+form.validate select.input-error,
+form.validate textarea.input-error {
+	border-color: #DB0707;
+	background-color: #FFFFCD;
+}

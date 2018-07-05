@@ -1,0 +1,44 @@
+<section class="top">
+	
+	<form class="col s12">
+
+		<div class="row">
+
+			<div class="input-field col s12">
+
+				<input type="text" ng-model="filtro" ng-model-options="{ debounce: 300 }" id="filtrar" class="validate" placeholder="Procurar compromisso">
+
+			</div>
+
+		</div>
+
+	</form>
+
+</section>
+
+<section class="content">
+
+	<cards ng-repeat="compromisso in compromissos | filter: filtro" id="{{compromisso.id}}" titulo="{{compromisso.titulo}}" detalhes="{{compromisso.detalhes}}" inicio="{{compromisso.inicio}}" fim="{{compromisso.fim}}" class="col s12 m3">
+
+		<a href="#/agenda/edit/{{compromisso.id}}" class="edit waves-effect waves-light btn blue darken-4">
+
+			<i class="large material-icons">mode_edit</i>
+
+		</a>
+
+		<a href="#/agenda/detail/{{compromisso.id}}" class="see waves-effect waves-light btn blue darken-4">
+
+			<i class="large material-icons">open_in_new</i>
+
+		</a>
+
+		<button type="button" class="remove waves-effect waves-light btn red darken-1" confirmed-click="remover(compromisso)" ng-confirm-click="Você tem certeza que deseja excluir este item?">
+		
+			<i class="large material-icons">delete</i>
+		
+		</button>
+		
+	</cards>
+
+
+</section>

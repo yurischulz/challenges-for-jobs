@@ -1,0 +1,73 @@
+<h1>{{titulo}}</h1>
+
+<div class="row">
+
+    <form name="compromissoForm" class="col s12" ng-submit="submeter()" action="#" novalidate>
+
+        <input type="hidden" id="consultor" name="consultor" ng-model="consultor.id">
+
+        <p ng-show="mensagem.length" class="alert alert-info">{{ mensagem }}</p>
+
+        <div class="row">
+
+            <div class="input-field col s8">
+
+                <div class="input-field col s12">
+
+                    <input placeholder="Título" id="titulo" type="text" class="validate" ng-model="compromisso.titulo" ng-maxlength="100" required>
+
+                    <span ng-show="compromissoForm.$submitted && compromissoForm.titulo.$error.required" class="form-control alert-danger">Titulo obrigatório</span>
+
+                </div>
+
+                <div class="input-field col s12">
+
+                    <textarea id="detalhes" class="materialize-textarea" placeholder="Detalhes" ng-model="compromisso.detalhes"></textarea>
+
+                </div>
+
+            </div>
+
+            <div class="input-field col s4">
+
+                <div class="input-field datepicker col s8">
+
+                    <span class="input-group-addon">
+
+                        <i class="large material-icons">today</i>
+
+                    </span>
+
+                    <input type="datetime-local" id="dataInicio" class="datepicker" ng-model="compromisso.inicio" required>
+
+                    <span ng-show="compromissoForm.$submitted && compromissoForm.inicio.$error.required" class="form-control alert-danger">Data de início obrigatória</span>
+
+                </div>
+
+                <div class="input-field datepicker col s8">
+
+                    <span class="input-group-addon">
+
+                        <i class="large material-icons">today</i>
+
+                    </span>
+
+                    <input type="datetime-local" id="dataFim" class="datepicker" ng-model="compromisso.fim" required>
+
+                    <span ng-show="compromissoForm.$submitted && compromissoForm.fim.$error.required" class="form-control alert-danger">Data de conclusão obrigatória</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <a href="/#/agenda" class="edit waves-effect waves-light btn blue darken-4" meu-focus>Voltar</a>
+
+        <button type="submit" class="edit waves-effect waves-light btn blue darken-4" ng-disabled="compromissoForm.$invalid">
+            Salvar
+        </button>
+
+    </form>
+
+</div>

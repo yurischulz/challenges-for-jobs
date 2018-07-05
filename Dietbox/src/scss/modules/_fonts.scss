@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+
+/* FONTES */
+@mixin light() {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+    font-style: normal;
+}
+@mixin light-italic() {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+    font-style: italic;
+}
+@mixin regular() {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+    font-style: normal;
+}
+@mixin italic() {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+    font-style: italic;
+}
+@mixin medium() {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+    font-style: normal;
+}
+@mixin medium-italic() {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+    font-style: italic;
+}
+@mixin bold() {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+    font-style: normal;
+}
+@mixin bold-italic() {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+    font-style: italic;
+}
+@mixin black() {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+    font-style: normal;
+}
+@mixin black-italic() {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+    font-style: italic;
+}

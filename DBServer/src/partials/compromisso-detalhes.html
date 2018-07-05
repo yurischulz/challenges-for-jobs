@@ -1,0 +1,59 @@
+<h1>{{titulo}}</h1>
+
+<div class="row">
+
+    <div class="row">
+
+        <div class="input-field col s12">
+
+            <span class="input-group-addon col s2">
+
+                <b>Compromisso:</b>
+
+            </span>
+
+            <p placeholder="Título" id="titulo" class="text col s10">{{compromisso.titulo}}</p>
+
+        </div>
+
+        <div class="input-field col s12">
+
+            <span class="input-group-addon col s2">
+
+                <b>Início: </b>
+
+            </span>
+
+            <p id="dataInicio" class="text col s10">{{compromisso.inicio | date:"dd/MM/yyyy HH:mm'H'"}}</p>
+
+        </div>
+
+        <div class="input-field col s12">
+
+            <span class="input-group-addon col s2">
+
+                <b>Fim: </b>
+
+            </span>
+
+            <p id="dataFim" class="text col s10">{{compromisso.fim | date:"dd/MM/yyyy HH:mm'H'"}}</p>
+
+        </div>
+
+        <div class="input-field col s12">
+
+            <span class="input-group-addon col s2">
+
+                <b>Detalhes: </b>
+
+            </span>
+
+            <p id="detalhes" class="text col s10" placeholder="Detalhes">{{compromisso.detalhes}}</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<a href="/#/agenda" class="edit waves-effect waves-light btn blue darken-4" meu-focus>Voltar</a>

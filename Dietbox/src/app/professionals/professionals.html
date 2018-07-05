@@ -1,0 +1,39 @@
+<div class="row">
+
+	<aside class="col-sm-3" aside-directive></aside>
+
+	<section class="col-sm-9">
+
+		<ng-map zoom="12" center="Porto Alegre, Rio Grande do Sul - Brasil" class="ng-map">
+
+			<marker ng-repeat="data in index track by $index"
+			id="custom-marker-{{ $index }}"
+			position="{{ data.professional.location.address }}"
+			title="You are here"
+			centered="true"
+			on-click="showInfoWindow(event, $index)">
+
+			<map-info-window
+			id="marker-info-{{ $index }}"
+			index="{{ $index }}"
+			name="{{ data.professional.name }}"
+			crn="{{ data.professional.crn }}"
+			bio="{{ data.professional.bio }}"
+			location="{{ data.professional.location }}"
+			location_name="{{ data.location.name }}"
+			address="{{ data.location.address }}"
+			phone="{{ data.location.phone }}">
+
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="hideInfoWindow(event, $index)">
+				<span aria-hidden="true">&times;</span>
+			</button>
+
+		</map-info-window>
+
+	</marker>
+
+</ng-map>
+
+</section>
+
+</div>

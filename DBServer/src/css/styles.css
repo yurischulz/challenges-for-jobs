@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800");
+/* basic */
+body {
+  font-family: 'Open Sans', sans-serif; }
+  body .wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 90%; }
+
+/* header */
+header {
+  padding: 15px 0;
+  position: relative;
+  -webkit-box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.75); }
+  header .logo {
+    height: 60px;
+    widows: auto; }
+  header .consultor-nome i {
+    cursor: pointer; }
+
+/* aside */
+aside .waves-effect {
+  font-size: 12px;
+  margin-bottom: 5px;
+  padding: 0 1em;
+  width: 100%; }
+  aside .waves-effect.total {
+    padding: 1.5em 1em;
+    height: inherit;
+    min-height: inherit;
+    line-height: 18px; }
+
+/* main */
+main {
+  padding: 30px 0; }
+  main h1 {
+    font-size: 2em;
+    margin: 10px 0 20px; }
+  main .content {
+    padding: 0 30px !important; }
+  main section {
+    margin-bottom: 15px; }
+    main section.top a {
+      margin: 10px 0; }
+    main section .card .card-content .card-title {
+      min-height: 50px;
+      line-height: 24px;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0 auto 30px; }
+    main section .card .card-content .card-date {
+      font-size: 13px; }
+      main section .card .card-content .card-date b {
+        display: inline-block;
+        font-size: 13px;
+        margin-bottom: 15px;
+        width: 50px; }
+    main section .card .waves-effect {
+      padding: 0 15px; }
+  main .datepicker {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    width: 100%; }
+    main .datepicker .form-control,
+    main .datepicker .input-group-addon,
+    main .datepicker .input-group-btn {
+      display: table-cell; }
+  main .input-field .input-group-addon {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    width: 1%; }
+    main .input-field .input-group-addon i {
+      font-size: 32px;
+      vertical-align: middle; }
+  main .input-field p {
+    display: inline-block; }

@@ -1,0 +1,23 @@
+<div class="card">
+
+	<div class="card-content">
+
+		<span class="card-title">{{titulo}}</span>
+
+		<div class="card-date">
+
+			<p><b>Início: </b>{{inicio | date: "dd/MM/yyyy - h:mma"}}</p>
+
+			<p><b>Fim: </b>{{fim | date: "dd/MM/yyyy - h:mma"}}</p>
+
+		</div>
+
+	</div>
+
+	<div class="card-action">
+
+		<div ng-transclude></div>
+
+	</div>
+
+</div>

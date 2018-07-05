@@ -1,0 +1,29 @@
+<form ng-submit="formSubmit()" class="form" novalidate>
+
+	<div class="col s8">
+
+		<div class="input-field">
+
+			<input type="text" class="form-control" ng-model="username" placeholder="username" required=""/>
+
+		</div> 
+
+
+		<div class="input-field">
+
+			<input type="password" class="form-control" ng-model="password" placeholder="password" required=""/>
+
+		</div>
+
+
+		<div class="input-field">
+
+			<button type="submit" class="btn blue darken-4">Login</button>
+
+			<span>{{ error }}</span>
+
+		</div>
+
+	</div>
+
+</form>

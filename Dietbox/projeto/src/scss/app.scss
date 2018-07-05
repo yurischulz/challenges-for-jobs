@@ -1,0 +1,85 @@
+@import 'modules/_variables';
+@import 'modules/_animated';
+@import 'modules/_mixins';
+@import 'modules/_fonts';
+
+@include animation(fade-out-up);
+@include animation(bounce-in-down);
+
+header {
+	height: 10vh;
+	min-height: 68.4px;
+	position: relative;
+	z-index: 2;
+	@include box-shadow(2px, 0, 3px, #333, false);
+
+	.bordertop {
+		height: 1vh;
+
+		&.bordertop-1 {
+			background-color: $yellow;
+		}
+		&.bordertop-2 {
+			background-color: $green;
+		}
+		&.bordertop-3 {
+			background-color: $orange;
+		}
+		&.bordertop-4 {
+			background-color: $blue;
+		}
+	}
+
+	#logo {
+		display: block;
+		margin: 19px auto;
+	}
+}
+
+main {
+	position: relative;
+	z-index: 0;
+	
+	aside {
+		padding: 0 !important;
+		position: relative;
+		z-index: 1;
+		@include box-shadow(0, 2px, 3px, #333, false);
+	}
+
+	section {
+		&[class^="col-sm-"] {
+			padding: 0;
+			position: relative;
+			z-index: 0;
+		}
+		
+		.ng-map {
+			height: 90vh !important;
+			padding: 0;
+		}
+	}
+}
+
+.header {
+	display: block;
+	padding: 20px;
+}
+
+.modal {
+	background-color: rgba(0, 0, 0, 0.25);
+	display: initial;
+	opacity: 0;
+	z-index: -1;
+	position: absolute;
+
+}
+.show {
+	@include animate(bounce-in-down, 710ms, 0);
+}
+.hide {
+	@include animate(fade-out-up, 250ms, 0);
+}
+.hidden {
+	display: none;
+}
